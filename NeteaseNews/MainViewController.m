@@ -33,7 +33,7 @@
 
 - (void)initTopBar
 {
-    NSArray *data = @[@"头条", @"科技", @"原创", @"历史", @"手机", @"财经", @"电影", @"体育", @"轻松一刻"];
+    NSArray *data = @[@"头条", @"科技", @"历史", @"手机", @"财经", @"电影", @"体育", @"轻松一刻"];
     
     _topBar = [[TopBarView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 35) buttonSpacing:20 buttonFontSize:16 buttonTitles:data];
     _topBar.topBarDelegate = self;
@@ -43,22 +43,18 @@
 
 - (void) initData
 {
-    NSString *url = @"http://c.m.163.com/nc/topicset/ios/v4/subscribe/news/all.html";
+    NSString *url = @"http://c.m.163.com/nc/topicset/ios/subscribe/manage/listspecial.html";
     
     [Downloader downloadJSON:url complete:^(NSDictionary *json, NSError *error) {
-        NSArray *data = (NSArray *)json;
-        
-        for (NSDictionary *json in data) {
-            NSArray *array = json[@"tList"];
+        NSArray *array = json[@"tList"];
             
-            for (NSDictionary *jd in array)
-                _topicSet[jd[@"tname"]] = jd;
-        }
+        for (NSDictionary *jd in array)
+                _topicSet[jd[@"tname"]] = jd[@"tid"];
 
         /* init channel view controller */
         CGFloat heigh = _topBar.frame.size.height;
         CGRect frame = CGRectMake(0, heigh, self.view.frame.size.width, self.view.frame.size.height-heigh);
-        NSString *channelID = _topicSet[@"头条"][@"tid"];
+        NSString *channelID = _topicSet[@"头条"];
         NSString *channelName = @"头条";
         ChannelViewController *viewController = [[ChannelViewController alloc] init:frame channelID:channelID channelName:channelName];
         
@@ -88,7 +84,7 @@
     
     CGFloat heigh = _topBar.frame.size.height;
     CGRect frame = CGRectMake(0, heigh, self.view.frame.size.width, self.view.frame.size.height-heigh);
-    NSString *channelID = _topicSet[name][@"tid"];
+    NSString *channelID = _topicSet[name];
     NSString *channelName = name;
     ChannelViewController *viewController = [[ChannelViewController alloc] init:frame channelID:channelID channelName:channelName];
     

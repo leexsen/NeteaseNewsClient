@@ -56,8 +56,8 @@
         
         if (range.length != NSNotFound) {
             NSString *urlStr = imgUrlSet[i][@"src"];
-            urlStr = [urlStr substringFromIndex:30];
-            urlStr = [NSString stringWithFormat:@"http://s.cimg.163.com/i/img3.cache.netease.com/%@.640x200.75.auto.jpg", urlStr];
+            urlStr = [urlStr substringFromIndex:7];
+            urlStr = [NSString stringWithFormat:@"http://s.cimg.163.com/i/%@.640x200.75.auto.jpg", urlStr];
             NSString *str= [NSString stringWithFormat:replace, urlStr];
             
             [body replaceCharactersInRange:range withString:str];

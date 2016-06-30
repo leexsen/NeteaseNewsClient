@@ -12,6 +12,8 @@
 	<dict>
 		<key>272F684BDB48C12FB82F63EFB90FF2436BBA2473</key>
 		<string>http://git.chromium.org/webm/libwebp.git</string>
+		<key>C5DB9B3723E5DD56F2FA4A354C36DB191894A983</key>
+		<string>https://github.com/leexsen/NeteaseNewsClient</string>
 		<key>E28E36D423EC87798E52E2BF482E9F7A1E6479D6</key>
 		<string>https://github.com/rs/SDWebImage.git</string>
 	</dict>
@@ -20,12 +22,18 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>272F684BDB48C12FB82F63EFB90FF2436BBA2473</key>
-		<string>../../../../../../../../../../../../../../Downloads/SDWebImage/Vendors/libwebp</string>
+		<string>../../../Downloads/SDWebImage/Vendors/libwebp</string>
+		<key>C5DB9B3723E5DD56F2FA4A354C36DB191894A983</key>
+		<string>../..</string>
 		<key>E28E36D423EC87798E52E2BF482E9F7A1E6479D6</key>
-		<string>../../../../../../../../../../../../../../Downloads/SDWebImage</string>
+		<string>../../../Downloads/SDWebImage</string>
 	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leexsen/NeteaseNewsClient</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C5DB9B3723E5DD56F2FA4A354C36DB191894A983</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +43,14 @@
 			<string>272F684BDB48C12FB82F63EFB90FF2436BBA2473</string>
 			<key>IDESourceControlWCCName</key>
 			<string>libwebp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C5DB9B3723E5DD56F2FA4A354C36DB191894A983</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NeteaseNewsClient</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

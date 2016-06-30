@@ -74,13 +74,13 @@
             // using this method is due to the fucking Neweast's API
             NSString *imgsrc = d[@"imgsrc"];
             NSString *imgSize;
-            imgsrc = [imgsrc substringFromIndex:30];
+            imgsrc = [imgsrc substringFromIndex:7];
             if (d[@"hasHead"] != nil)
-                imgSize = @"640x370";
+                imgSize = @"640x370.75";
             else
-                imgSize = @"162x124";
+                imgSize = @"162x124.75";
             
-            NSString *url = @"http://s.cimg.163.com/pi/img3.cache.netease.com/%@.%@.auto.webp";
+            NSString *url = @"http://s.cimg.163.com/pi/%@.%@.auto.webp";
             url = [NSString stringWithFormat:url, imgsrc, imgSize];
           
             [Downloader downloadImage:url complete:^(UIImage *img, NSError *error) {
